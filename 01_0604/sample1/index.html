@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <h1>献血募集チェック</h1>
+  <p>18歳～65歳までの血液型が判明している人の献血をお願いします。</p>
+  <form name="kenketsu">
+    <p>年齢：<input type="number" name="age"></p>
+    <p><select name="bloodType">
+        <option value="">血液型を選択</option>
+        <option value="A">A型</option>
+        <option value="B">B型</option>
+        <option value="O">O型</option>
+        <option value="AB">AB型</option>
+        <option value="unknown">不明</option>
+    </select></p>
+  </form>
+  <button id="btn">献血チェック</button>
+  <p class="age">あなたの年齢</p>
+  <p class="blood">あなたの血液型</p>
+  <p class="judge">判定</p>
+  
+</body>
+</html>
