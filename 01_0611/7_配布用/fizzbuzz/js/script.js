@@ -1,17 +1,19 @@
 var fizzbuzz = [];
 
-
 //ここにfor文を使って配列fizzbuzzを作る処理を記述する
-for ( let i = 0; i < 100; i++){
+for ( let i = 0; i < 101; i++){ /**0から始まるから１０１にする */
   //fizzbuzz.push(i+1);
   //console.log(fizzbuzz[i]);
-  if ( i % 5 == 0){
-    console.log("fizz");
+  if ( i % 15 == 0){
+    console.log("fizzbuz");
   }
   else if ( i % 3 == 0){
+    console.log("fizz");
+  }
+  else if( i % 5 == 0){
     console.log("buzz");
   }
-  else{
+  else {
     console.log(i);
   }
 }
