@@ -1,7 +1,7 @@
 var fizzbuzz = [];
 
 //ここにfor文を使って配列fizzbuzzを作る処理を記述する
-for ( let i = 0; i < 101; i++){ /**0から始まるから１０１にする */
+for ( let i = 0; i < 101; i++){ /**カウントが0から始まるから１０１にする */
   //fizzbuzz.push(i+1);
   //console.log(fizzbuzz[i]);
   if ( i % 15 == 0){

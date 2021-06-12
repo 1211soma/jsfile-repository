@@ -15,7 +15,7 @@ console.log(y);
 
 var array = [];
 array = [2,4,6,8,10];
-array.length;
+array.length
 
 for ( let i = 0; i < 5 ; i++){
     console.log(array[i]);  /**[i]という指定はinedexのすべてを表示させてください */ 
