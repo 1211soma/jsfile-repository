@@ -12,12 +12,11 @@ switch(val) {
 }
 
 
-
-
-
-
-
-
+/*「果物を選択」を選んだ場合は「商品を選択してください」と返す
+バナナの場合は「バナナは198円です」と返す
+リンゴとみかんの場合はどちらを選んでも「リンゴとみかんは298円です」と返す
+ぶどうの場合は「ぶどうは600円です」と返す
+その他の場合は「現在品切れです」と返す。*/
 
 
 function itemPrice(){ 
@@ -30,7 +29,7 @@ function itemPrice(){
     //ここからswitchを記述
     //検証するときは、２０行目のoptionvalueにcaseを入力する
 
-    var optionValue = "";
+    var optionValue = 'バナナ';
     switch(optionValue) {
         case "":
             elm.innerText = "商品を選択してください";
