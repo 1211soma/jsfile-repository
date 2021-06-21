@@ -1,18 +1,12 @@
+//演習問題１はalertを十回押して、１から１０までカウントできる仕様にしてください
 
-var array = [];
-array = ['伊藤','遠藤','佐藤','鈴木','松尾'];
-var ulList = document.querySelector('ul');
+//演習問題２はalertを10から１へと一つずつ減るようにカウントしなさい
 
-for ( let i = 0; i < array.length; i++){ //最後以外に成立する等号にする
-  var list = document.createElement('li'); //js内にhtml上で使うliを定義
-  var addlist = ulList.appendChild(list);
-  addlist.innerText = array[i];
-  if (i % 2 == 0){
-    addlist.style = "color: red"; 
-  }else {
-    addlist.style = "color: blue";
-  }
-}
+
+
+
+
+
 
 /*for文は繰り返すもの */
 
