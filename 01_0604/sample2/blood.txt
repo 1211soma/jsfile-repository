@@ -1,20 +1,10 @@
-var val = 1;
-switch(val) {
-    case 1:
-        console.log('1です');
+一問目　switch文で「１です」をコンソール上に表記させてください
 
-    case 2:
-        console.log('2です');
-    break;
+二問目　switch文で「2です」をコンソール上に表記　また、defaultを駆使して「それ以外」を表記させてください
 
-    default:
-        console.log('それ以外です');
-}
-
-
-
-
-
+三問目　switch文で「1です」「2です」を表記させてください
+　
+[注意]switch文は常に===で判定するため、数値と型が同じでなければスルーされます
 
 
 
