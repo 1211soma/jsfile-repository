@@ -4,14 +4,13 @@ function bloodCheck(){　// ←関数は呼び出されると処理が始まる�
   var judgeP = document.querySelector('.judge'); 
 
   //年齢と血液型が空だったらという条件
-  if ( age == "" || blood == ""){
-    judgeP.innerText = '必要項目を入力してください';
-  }else if ( age >= 18 && 65 >= age && blood != 'unknown'){
-    judgeP.innerText = '不足しています！ご協力お願いします';
-  }else {
-    judgeP.innerText = 'ご協力ありがとうございました。' ;
-  }
-
+if( age == "" || blood == ""){
+  judgeP.innerText = '必要項目を入力してください'; 
+}else if ( age >= 18 && 65 >= age && blood != 'unknown'){
+  judgeP.innerText = 'ご協力ありがとうございます！';
+}else {
+  judgeP.innerText = 'またの機会をお待ちしております';
+}
   //18歳以上65歳以下で、血液型が「不明」になっていない　という条件
  
   //それ以外
