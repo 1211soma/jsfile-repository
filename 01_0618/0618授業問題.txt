@@ -5,6 +5,7 @@ for ( let i = 1; i <= 10; i++){
 }
 
 //演習問題２はalertを10から１へと一つずつ減るようにカウントしなさい
+
 for ( let i = 10; i >= 1; i--){
   alert(i);
 }
@@ -15,7 +16,7 @@ var array = [];
 array = ["伊藤","遠藤","佐藤","鈴木","松尾"]; 
 var ulList = document.querySelector('ul');//ul要素をhtmlから引っ張ってこい
 
-
+//4ではなく、lengthで数字を返す
 for ( let i = 0; i < array.length; i++){ //lengthは配列内にある数を返す言葉 //４以下になったら処理を終えろ
   var list = document.createElement('li');
   var addList = ulList.appendChild(list);
