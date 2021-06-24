@@ -29,30 +29,27 @@ function itemPrice(){
     //ここからswitchを記述
     //検証するときは、２０行目のoptionvalueにcaseを入力する
 
-   var optionValue = "リンゴ";
-   switch (optionValue) {
-       case "":
-           elm.innerText = '商品を選択してください';
-           break;
+  var optionValue = "みかん";
+  switch (optionValue) {
+        case "":
+          elm.innerText = '商品を選択してください';
+          break;
         case "バナナ":
-            elm.innerText = 'バナナは198円です';
+            elm.innerText = 'バナナは１９８円です';
             break;
         case "リンゴ":
-            elm.innerText = 'リンゴとみかんは298円です';
+            elm.innerText = 'リンゴとミカンは２９８円です';
             break;
         case "みかん":
-            elm.innerText = 'リンゴとみかんは298円です';
+            elm.innerText = 'リンゴとミカンは２９８円です';
             break;
         case "ぶどう":
-            elm.innerText = 'ぶどうは600円です';
-        break;
-       default:
-           elm.innerText = '現在、品切れです';
-           break;
-   }
-    //ここまでswitch
+            elm.innerText = 'ブドウは６００円です';
+            break;
+        default:
+          elm.innerText = '現在、品切れです';
+  }
 }
-
 var btn = document.querySelector('#btn');
 btn.addEventListener('click',itemPrice)
 

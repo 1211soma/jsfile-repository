@@ -4,6 +4,21 @@
 
 //演習１から３までの画像のようにブラウザに表示させなさい
 
+var array = [];
+array = ['伊藤','遠藤','佐藤','鈴木','松尾'];
+var ulList = document.querySelector('ul');
+
+for (let i = 0; i < array.length; i++){
+    var list = document.createElement('li');
+    var addList = ulList.appendChild(list);
+    addList.innerText = array[i];
+if ( i % 2 == 0){
+    addList.style = "color: red";
+} else {
+    addList.style = "color: blue";
+}
+}
+
 
 
 

@@ -1,7 +1,7 @@
 var hour = new Date(); /*何時？かは、常に新しい、現在時刻で設定する*/
 var time = hour.getHours();　/*何時？の値を０～２３時までの値で返す*/
 
-var hello = time(12); //現在時刻に合わせた文章を指定するための変数名
+var hello = time; //現在時刻に合わせた文章を指定するための変数名
 
 if ( time < 9 ){
     hello = 'おはよう'; 
