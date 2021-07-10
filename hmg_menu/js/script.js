@@ -13,9 +13,6 @@ function viewmenu (){
     btnBtm.classList.toggle('btm_close');
 
 
-
-
-
 }
 
 
