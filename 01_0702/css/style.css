@@ -1,0 +1,10 @@
+.off{
+    opacity: 0;
+}
+.btn {
+    background-color: cyan;
+    height: 48px;
+    width: 48px;
+}
+
+
