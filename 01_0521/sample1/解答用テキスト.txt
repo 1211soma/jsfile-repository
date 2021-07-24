@@ -1,28 +1,63 @@
+htmlにtime.jsを読み込ませる
+現在時間を変数hourに代入する
+時間を取得するコンストラクターを使う
+変数に時間を代入する
+if文を使って下記の条件を設定
+12時より前なら「おはよう」と返す
+17時より前なら「こんにちは」と返す
+21時より前「こんばんは」と返す
+それ以外なら、「夜中にどうしたの？」と返す
+consoleにif文での条件が適合した場合の内容を表示させる（動作チェック）
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var hour = new Date(); /*何時？かは、常に新しい、現在時刻で設定する*/
 var time = hour.getHours();　/*何時？の値を０～２３時までの値で返す*/
 
-var hello = time;　　　/*helloにvar timeを反映させる*/
-if( time < 12 ){
-    hello = 'おはよう';
-}
-else if(time < 17){     　/*ifじゃなければ*/
-    hello = 'こんにちは'; 
-}
-else if(time < 21) {　　　/*if,一つ目のelse if じゃなければ*/
+var hello = time; //現在時刻に合わせた文章を指定するための変数名
+
+if ( time <= 9 ){
+    hello = 'おはよう'; 
+}else if ( time <= 12){
+    hello = 'こんにちは';
+}else if ( time <= 18){
     hello = 'こんばんは';
+}else {
+    hello = '夜中にどうしたの';
 }
-else{ 　　　　　　　　　　　　　　/*それ以外*/ 
-    hello = '夜中にどうしたの？';
-}
+
+
+
+
+
+
+
 
 var now = document.querySelector('.now');　/*varで変数名[now]を設定、htmlのclass名、nowを呼ぶ*/
 now.innerText = hello; /*nowの中にhelloの文言を指定する*/
-
-
-
-
-
-
-/*javascriot 絶対守るルール*/
-/*二つ以上の英単語は　二つ目の単語の頭文字を絶対に、大文字にする！！！！！！！！*/
-/* 例　innerText new Date*/
