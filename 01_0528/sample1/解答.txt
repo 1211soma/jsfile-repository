@@ -17,11 +17,3 @@ if (pass < math && pass < eng){
 }else {
     passP.innerText = 'どちらも不合格';
 }
-
-
-
-
-
-
-
-
