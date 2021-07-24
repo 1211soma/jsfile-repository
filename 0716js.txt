@@ -1,0 +1,5 @@
+ <li id="now">自治会について</li>
+                <li><a href="./q&a/index.html">Q&A</a></li>
+                <li><a href="./action&peformance/index.html">活動内容と実績</a></li>
+                <li><a href="./event&plan/index.html">イベント・企画</a></li>
+                <li><a href="./contact/index.html">お問い合わせ</a></li>
