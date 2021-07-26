@@ -1,21 +1,10 @@
-一問目　switch文で「１です」をコンソール上に表記させてください
-
-二問目　switch文で「2です」をコンソール上に表記　また、defaultを駆使して「それ以外」を表記させてください
-
-三問目　switch文で「1です」「2です」を表記させてください
-　
-[注意]switch文は常に===で判定するため、数値と型が同じでなければスルーされます
 
 
-【四問目】
-switch文を記述する箇所に適切に下記の要件を達成して、動作させてください。
-
-「果物を選択」を選んだ場合は「商品を選択してください」と返す
+/*「果物を選択」を選んだ場合は「商品を選択してください」と返す
 バナナの場合は「バナナは198円です」と返す
 リンゴとみかんの場合はどちらを選んでも「リンゴとみかんは298円です」と返す
 ぶどうの場合は「ぶどうは600円です」と返す
-その他の場合は「現在品切れです」と返す。
-
+その他の場合は「現在品切れです」と返す。*/
 
 
 function itemPrice(){ 
@@ -25,32 +14,30 @@ function itemPrice(){
     var optionValue = item.options[num].value;
     var elm = document.querySelector('.cart');
 
-    //ここからswitchを記述
-    //検証するときは、２０行目のoptionvalueにcaseを入力する
 
-    var optionValue = "";
-    switch(optionValue) {
-        case "":
-            elm.innerText = "商品を選択してください";
+  //switch文のみ記述
+  //var optionValue = "みかん";
+ switch (optionValue){
+     case "":
+         elm.innerText = '商品を選択してください';
+         break;
+    case "バナナ":
+        elm.innerText = 'バナナは198円です';
         break;
-        case "バナナ":
-            elm.innerText = "バナナは198円です";
+    case "リンゴ":
+        elm.innerText = 'リンゴとみかんは298円です';
         break;
-        case "リンゴ","みかん":
-            elm.innerText = "リンゴとミカンは２９８円です";
+    case "みかん":
+        elm.innerText = 'リンゴとみかんは298円です';
         break;
-        case "ぶどう":
-            elm.innerText = "ぶどうは600円です";
+    case "ぶどう":
+        elm.innerText = 'ぶどうは600円です';
         break;
-
-        default:
-            elm.innerText = "現在、品切れです。";
-    }
-
-
-    //ここまでswitch
+    default :
+        elm.innerText = '現在、品切れです';
+ }
 }
-
 var btn = document.querySelector('#btn');
 btn.addEventListener('click',itemPrice)
+
 
