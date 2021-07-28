@@ -1,4 +1,4 @@
-function bloodcheck (){
+function bloodcheck(){
   var age = document.kenketsu.age.value;
   var blood = document.kenketsu.bloodType.value;
   var judgeP = document.querySelector('.judge');
@@ -6,9 +6,9 @@ function bloodcheck (){
   if ( age == "" || blood == ""){
     judgeP.innerText = '必要項目を入力してください';
   }else if ( 18 <= age && age <= 65 && blood != 'unknown'){
-    judgeP.innerText = '足りていません! 献血お願いします！';
+    judgeP.innerText = '足りていません！献血お願いします！';
   }else {
-    judgeP.innerText = 'ご協力ありがとうございました';
+    judgeP.innerText = 'ご協力ありがとうございました。';
   }
 
   var ageP = document.querySelector('.age');
@@ -17,11 +17,8 @@ function bloodcheck (){
   bloodP.innerText = blood;
 }
 
-
-
-  var btn = document.querySelector('#btn');
-  btn.addEventListener('click',bloodcheck);
-
+var btn = document.querySelector('#btn');
+btn.addEventListener('click',bloodcheck);
 
 
 
