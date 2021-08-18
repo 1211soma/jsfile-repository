@@ -41,3 +41,39 @@ var btn = document.querySelector('#btn');
 btn.addEventListener('click',itemPrice)
 
 
+
+
+function itemprice(){
+    var item = document.fruits.fruit;
+    var num = item.selectedIndex;
+    var optionValue = item.options[num].value;
+    var elm = document.querySelector('.cart');
+    
+    
+        switch (optionValue){
+            case "":
+                elm.innerText = '必要項目を入力してください';
+            break;
+            case "バナナ":
+                elm.innerText = '東京ばな奈';
+            break;
+            case "リンゴ":
+                elm.innerText = '椎名林檎';
+            break;
+            case "みかん":
+                elm.innerText = '未完成';
+            break;
+            case "ぶどう":
+                elm.innerText = '武道館';
+            break;
+            default:
+                elm.innerText = '現在。品切れです';
+            break;
+        }  
+        
+}
+var btn = document.querySelector('#btn');
+btn.addEventListener('click',itemprice);
+
+
+

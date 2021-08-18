@@ -1,29 +1,24 @@
-function bloodcheck(){
+function bloodtest(){
   var blood = document.kenketsu.bloodType.value;
   var age = document.kenketsu.age.value;
-  var judgeP = document.querySelector('.judge');
+  var judgeP = document.querySelector('.judge')
 
-  if ( age == "" || blood == ""){
-      judgeP.innerText = '必要項目を入力してください';
-  }else if ( 18 <= age && 65 >= age && blood != 'unknown'){
-      judgeP.innerText = '不足しています！';
+  if ( blood == "" || age == ""){
+    judgeP.innerText = '必要項目を入力してください';
+  }else if ( blood != 'unknown' && 18 <= age && age <= 65 ){
+    judgeP.innerText = '不足しています！献血お願いします！';
   }else {
-    judgeP.innerText = '興味・関心を持っていただきありがとうございました。';
+    judgeP.innerText = '関心を持っていただきありがとうございました。';
   }
 
-
-  var ageP = document.querySelector('.age');
-  var bloodP = document.querySelector('.blood');
+  var ageP = document.queryCommandEnabled('.age');
+  var bloodP = document.queryCommandEnabled('.blood');
   ageP.innerText = age;
   bloodP.innerText = blood;
-
-
 }
 
-
 var btn = document.getElementById('btn');
-btn.addEventListener('click',bloodcheck);
-
+btn.addEventListener('click',bloodtest);
 
 
 
