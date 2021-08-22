@@ -1,0 +1,49 @@
+h1 {
+    text-align: center;
+}
+#please {
+    text-align: center;
+}
+#ageBox {
+    text-align: center;
+    margin: 50px auto;
+}
+#bloodBox {
+    margin: 20px 0 20px 43%;
+}
+select{
+    padding: 5px 35px 5px 10px;
+}
+select option {
+    padding: 10px;
+}
+
+#btn {
+    display: block;
+    margin: 50px auto 20px;
+    text-align: center;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 20px;
+    border: 2px solid #000;
+}
+#btn:hover {
+    color: #fff(241, 26, 26);
+    background: crimson;
+    border:2px solid #000;
+}
+.result_p {
+    text-align: center;
+    margin: 30px auto; 
+}
+.result_p .age,.blood,.judge{
+    display: inline-block;
+    padding: 10px;
+    border-bottom: solid 2px #000;
+}
+
+
+
+
+
+

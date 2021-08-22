@@ -1,36 +1,27 @@
-function bloodtest(){
-  var blood = document.kenketsu.bloodType.value;
-  var age = document.kenketsu.age.value;
-  var judgeP = document.querySelector('.judge')
+function bloodTest (){
+  let age = document.kenketsu.age.value;
+  let blood = document.kenketsu.bloodType.value;
+  let judgeP = document.querySelector('.judge');
+  let ageP = document.querySelector('.age');
+  let bloodP = document.querySelector('.blood');
 
-  if ( blood == "" || age == ""){
+  if (age == "" || blood == ""){
     judgeP.innerText = '必要項目を入力してください';
-  }else if ( blood != 'unknown' && 18 <= age && age <= 65 ){
-    judgeP.innerText = '不足しています！献血お願いします！';
+    ageP.innerText = age;
+    bloodP.innerText = blood;
+  }else if( 18 <= age && 65 >= age && blood != 'unknown'){
+    judgeP.innerText = '献血対象者に適合します';
+    ageP.innerText = age;
+    bloodP.innerText = blood;
   }else {
-    judgeP.innerText = '関心を持っていただきありがとうございました。';
+    judgeP.innerText = '献血対象者に適合しません';
+    ageP.innerText = age;
+    bloodP.innerText = blood;
   }
-
-  var ageP = document.queryCommandEnabled('.age');
-  var bloodP = document.queryCommandEnabled('.blood');
-  ageP.innerText = age;
-  bloodP.innerText = blood;
 }
 
-var btn = document.getElementById('btn');
-btn.addEventListener('click',bloodtest);
-
-
-
-
-//年齢と血液型が空だったらという条件
-//18歳以上65歳以下で、血液型が「不明」になっていないという条件
-//それ以外
-
-//年齢と血液型をHTMLに表示させる処理
-// ボタン要素を取得して、クリックしたらbloodCheckという関数が動く
-
-
+let btn = document.getElementById('btn');
+btn.addEventListener('click',bloodTest);
 
 
 
