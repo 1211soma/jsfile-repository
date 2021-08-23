@@ -1,18 +1,6 @@
 
-// function func1(){
-    let me = {
-        firstName: '宗馬',
-        familyName: '辻',
-        age: 19
-    }
-    
-    
-    let para = document.querySelector('#myName');
-    // para.innerHTML = '私の名前は' + me.familyName + me.firstName + 'です' + me.age + '歳です'
-    
-    
+
 // }
-// document.addEventListener('DOMcontentLoaded',func1)
 
 
 // let array = {
@@ -38,14 +26,28 @@
 // }
 
 
-
-let obj = {
-    date1 : 'こんにちは',
-    date2 : 344,
-    date3 : 12 + 23
-}
-
-let test1 = obj.date1
+// let obj = {
+//     date1 : 'こんにちは',
+//     date2 : 344,
+//     date3 : 12 + 23
+// }
 
 
 
+
+
+
+
+
+
+function func1(){
+    let me = {
+        firstName: '宗馬',
+        familyName: '辻',
+        age: 19
+    }
+}    
+    
+    let para = document.getElementById('myName');
+    para.innerHTML = '私の名前は' + me.familyName + me.firstName + 'です' + me.age + '歳です';
+    document.addEventListener('DOMcontentLoaded',func1);

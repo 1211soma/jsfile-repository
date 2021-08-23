@@ -1,0 +1,30 @@
+
+.red {
+    text-align: center;
+    list-style: none;
+    margin: 40px auto;
+    width: 50%;
+    color: rgb(223, 18, 18);
+    animation:3s linear infinite rotation1;
+}
+@keyframes rotation1{
+    0%{ transform:rotate(1000);}
+    100%{ transform:rotate(360deg); }
+  }
+.blue {
+    text-align: center;
+    list-style: none;
+    margin: 40px auto;
+    width: 50%;
+    color:blue;
+    animation:3s linear infinite rotation2;
+}
+@keyframes rotation2{
+    0%{ transform:rotate(1000);}
+    100%{ transform:rotate(-360deg); }
+  }
+
+
+
+
+

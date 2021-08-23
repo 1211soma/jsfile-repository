@@ -41,15 +41,12 @@
 
 
 
-
-
-
-function btnAction(){
-    let offy = document.querySelector('.ularea');
-    offy.classList.toggle('off');
+function btnItem(){
+    let ulArea = document.querySelector('.ulArea');
+    ulArea.classList.toggle('off');
 }
 const btn = document.querySelector('.btn');
-btn.addEventListener('click',btnAction);
+btn.addEventListener('click',btnItem);
 
 
 

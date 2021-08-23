@@ -1,5 +1,6 @@
 .off{
     opacity: 0;
+    /* opcity: 0; で リストを透明化、隠している */
 }
 .btn {
     background-color: cyan;

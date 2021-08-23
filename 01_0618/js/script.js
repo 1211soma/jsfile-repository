@@ -1,22 +1,33 @@
 //演習問題１はalertを十回押して、１から１０までカウントできる仕様にしてください
 
+// for ( let a = 1; a < 11; a++){
+//     alert(a);
+// }
+
+
 //演習問題２はalertを10から１へと一つずつ減るようにカウントしなさい
+
+// for ( let b = 10; b > 0; b--){
+//     alert(b);
+// }
+
 
 //演習１から３までの画像のようにブラウザに表示させなさい
 
 var array = [];
-array = ['伊藤','遠藤','佐藤','鈴木','松尾'];
+array = ['佐藤','鈴木','豊田','新庄','矢崎'];
+
 var ulList = document.querySelector('ul');
 
-for (let i = 0; i < array.length; i++){
+for ( let i = 0; i < array.length; i++){
     var list = document.createElement('li');
-    var addList = ulList.appendChild(list);
-    addList.innerText = array[i];
-if ( i % 2 == 0){
-    addList.style = "color: red";
-} else {
-    addList.style = "color: blue";
-}
+    ulList.appendChild(list);
+    list.innerText = array[i];
+    if ( i % 2 == 0){
+        list.className = 'red';
+    }else {
+        list.className = 'blue';
+    }
 }
 
 

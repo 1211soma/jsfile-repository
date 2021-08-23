@@ -1,0 +1,33 @@
+
+四角いボタンをクリックしたら、以下の
+りすとが表示されるようにしろ。
+
+・　menu1
+・　menu2
+・　menu3
+・　menu4
+
+
+
+
+
+
+
+
+
+
+
+function btnAction(){
+    let offy = document.querySelector('.ularea');
+    offy.classList.toggle('off');
+}
+const btn = document.querySelector('.btn');
+btn.addEventListener('click',btnAction);
+
+
+
+
+
+
+
+
