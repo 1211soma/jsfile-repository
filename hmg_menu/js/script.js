@@ -1,27 +1,17 @@
-function viewmenu (){
-    let menu = document.querySelector('.ulArea');
-    let btnTop = document.querySelector('.top');
-    let btnMid = document.querySelector('.mid');
-    let btnBtm = document.querySelector('.btm');
+function test (){
+    var ulbox = document.querySelector('.ulArea');
+    var top = document.querySelector('.top');
+    var mid = document.querySelector('.mid');
+    var btm = document.querySelector('.btm');
 
-
-
-    menu.classList.toggle('off');
+    ulbox.classList.toggle('off');
     btn.classList.toggle('active');
-    btnTop.classList.toggle('top_close');
-    btnMid.classList.toggle('mid_close');
-    btnBtm.classList.toggle('btm_close');
-
+    // 三本線がクリックすると動く
+    top.classList.toggle('top_close');
+    mid.classList.toggle('mid_close');
+    btm.classList.toggle('btm_close');
 
 }
 
-
-const btn = document.querySelector('.btn');
-btn.addEventListener('click',viewmenu)
-
-
-
-
-
-
-
+var btn = document.querySelector('.btn');
+btn.addEventListener('click',test);
