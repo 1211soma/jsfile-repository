@@ -1,30 +1,41 @@
 function itemPrice(){
     var item = document.fruits.fruit;
     var num = item.selectedIndex;
-    var optionvalue = item.options[num].value;
+    var box = item.options[num].value;
     var cart = document.querySelector('.cart');
-
-    switch (optionvalue) {
+    
+    switch (box){
         case "":
-            cart.innerText = '新宿';
-        break;
+            cart.innerText = '商品を選択してください';
+            break;
         case "バナナ":
-            cart.innerText = '新大久保';
-        break;
+            cart.innerText = 'バナナフィッシュ';
+            break;
         case "リンゴ":
-            cart.innerText = '品川';
-        break;
+            cart.innerText = 'リンゴスター';
+            break;
         case "みかん":
-            cart.innerText = '心斎橋';
-        break;
+            cart.innerText = 'ミカンジュース';
+            break;
         case "ぶどう":
-            cart.innerText = '九段下';
-        break;
+            cart.innerText = '武道館';
+            break;
+        case "もも":
+            cart.innerText = '桃井かおり';
+            break;
         default:
-            cart.innerText = '品切れです';
-        break;
+            cart.innerText = 'パインアメ';
+            break;
     }
+    
+    
+    
 }
+
+
 
 var btn = document.getElementById('btn');
 btn.addEventListener('click',itemPrice);
+
+
+
