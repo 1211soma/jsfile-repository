@@ -46,10 +46,10 @@ console.log(window.yy);//windowオブジェクトのyyとして存在
 
 //ブロックスコープのテスト
 
-var a = 'hello';
+var a = 'hello'; //グローバルスコープの変数a
 function func2() {
     var a = 0;
-    console.log(a);
+    console.log(a);// 0 ブロックスコープの変数a
 }
 func2 ();
 console.log(a);// グローバス 'hello' を出力
@@ -176,18 +176,55 @@ console.log(String);
         const test = num1 + num2;
         const outPut = document.getElementById('output');
         // outPut = test;//outPutに計算結果が格納される
-        outPut.innerHTML = `答えは` + test  + `です`;
+        outPut.innerHTML = `答えは` + `${test}`  + `です`;
+
+        /////////演習２
+        // if ( Number(parseInt(test))) {
+        //     outPut.innerHTML = `答えは` + test  + `ですよ`;
+        // }else if ( test !== Number) {
+        //     outPut.innerHTML = `数値を入力してください`;
+        // }
+
+        // const array = [];
+        // if ( num1 , num2 == Number(parseInt(test))) {
+        //     outPut.innerHTML = `答えは` + test  + `ですよ`;
+        //     return num1 + num2;
+        // }else if ( test !== Number) {
+        //     outPut.innerHTML = `数値を入力してください`;
+        // }
+
+        // {
+        // const array = [1];
+        // array[0] = 2; //変更できる
+        // array.push('hi'); //追加できる
+        // }
+
+        function multiply() {
+            const array = [1];
+
+            if (Number(parseInt(test))) {
+                array[0] = test;
+                console.log(array);
+            }
+            return num1 + num2;
+         
+        }
+        console.log( multiply(num1, num2 ) + 'ですよ' );
+        //ボタンを押すと計算結果が出てくる
+
+      
+
+
     }
     const btn = document.getElementById('btn');
     btn.addEventListener('click',plus);
 
 
 
-// 演習問題２
 
 
 
-//演習問題３
+
 
 
 
