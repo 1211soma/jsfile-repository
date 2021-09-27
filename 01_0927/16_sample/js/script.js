@@ -163,7 +163,7 @@ console.log(String);
 
 
 
-//     //演習問題１
+//演習問題１
 'use strict';
     function plus()  {
         const num1 = Number(document.getElementById('num1').value);
@@ -181,6 +181,13 @@ console.log(String);
     const btn = document.getElementById('btn');
     btn.addEventListener('click',plus);
 
+
+
+// 演習問題２
+
+
+
+//演習問題３
 
 
 
