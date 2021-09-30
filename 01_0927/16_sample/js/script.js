@@ -3,6 +3,11 @@
 // console.log(x);
 // // 0
 
+
+
+
+
+
 // function func1() {
 //     'use strict';
 //     y = 1;
@@ -10,12 +15,13 @@
 // }//変数宣言していないからエラーになった。ストリクトモード下にあるため。
 // func1();
 
-x = 1;
+xy = 1;
 {
 const x = 'hello world';
 console.log(x);
+console.log(xy);
 }//ブロック内のxを参照
-console.log(x);
+
 //グローバル変数のxを参照
 
 //グローバルとローカルで同じ変数を作らない！
@@ -46,22 +52,56 @@ console.log(window.yy);//windowオブジェクトのyyとして存在
 
 //ブロックスコープのテスト
 
-var a = 'hello'; //グローバルスコープの変数a
+var a = 'グローバル変数のaです！'; //グローバルスコープの変数a
+function func1() {
+    var a = 'ローカル変数だよ';
+    console.log(a);//ブロックスコープの変数a
+}
+func1 ();//関数の処理を実行
+console.log(a);// グローバル変数 を出力 //関数内の{}の変数aは出力しない
+
+if ( true ) {
+    console.log(a); // グローバル変数;
+}
+console.log(a);
+
+//  ブロック　とは　{}　で囲われたもの  
+
+
+// let const でやった場合
 function func2() {
-    var a = 0;
-    console.log(a);// 0 ブロックスコープの変数a
+    let a = 111;
+    console.log(a);//ブロックスコープのlet もしくは const a を出力 //111
 }
-func2 ();
-console.log(a);// グローバス 'hello' を出力
+func2(); 
+console.log(a);// グローバル変数のaを出力　//関数内の{}の変数aは出力しない
 
-function func3() {
-    const a = 1;
-    console.log(a);
+if ( true ) {
+    console.log(a); //グローバル変数
+} 
+
+
+
+
+const abc = 'グローバル変数２';
+if (true) {
+    const abc = 1000;
+    console.log(abc);//1000
 }
-func3(); //1
-console.log(a);// グローバル変数の36行目のaを出力
+console.log(abc);//varの場合、1000 //*let,constの場合、グローバル変数２を出力
 
-//ブロックテスト let.constでもやってみる
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -100,12 +140,12 @@ console.log('グローバルでは',name)//let,constの場合は、日本電子
 
 //巻き上げ
 
-var aa = 'tes';
+var aa = 'aa1';
 
 function makiage(){
     console.log(aa);//直下にaaが再代入されており、左辺の[var aa]とmakiage()が出力されているため
     //[undefind]と出力される
-    var aa = 'local';
+    var aa = 'aa2';
     console.log(aa);
 }
 makiage();
@@ -115,19 +155,33 @@ makiage();
 
 //宣言だけを巻き上げる
 
+
+
+
+
+
 const obj = {namae: '山田太郎'};
-obj.namae = '田中洋一';
-obj.age = '19';
+obj.namae = '田中洋一'; // 配列の中身、書き換え
+obj.age = 19 + '歳';
 
 console.log(obj);
 
 
-const array = [1];
-array[0] = 2;//値を変更できる
-array.push('hi');//追加できる
+const array = [];
+array[0] = 2;//値を変更できる //0番目に2を追加
+array.push('hi');//追加できる　//新たにhiが追加
 
-console.log(array);
+console.log(array + '  配列のたまり場');
 
+const addTxt = 'beautiful'
+const txt2 = `hello ${ addTxt } world!!!!!!!!!!!!!!!!`;
+
+const txt3 = `生き て るだけで、
+愛`;
+
+console.log(txt3);
+
+console.log(txt2);
 
 
 let sum = 1 + '1';
@@ -147,6 +201,7 @@ const txt = '\'hello\'\n\'world\'';
 console.log(txt);
 
 // \nで改行できる
+// hello world 改行されたテキスト
 
 
 String (true);
@@ -163,42 +218,26 @@ console.log(String);
 
 
 
+    
+
 //演習問題１
 'use strict';
-    function plus()  {
+    const sample = btn.addEventListener('click',function plus() {
         const num1 = Number(document.getElementById('num1').value);
         const num2 = Number(document.getElementById('num2').value);
-        // const box1 = num1.value;
-        // const box2 = num2.value;
-        // const box3 =  parseInt(box1);
-        // console.log(typeof box3);
-        // parseInt(box2);
         const test = num1 + num2;
         const outPut = document.getElementById('output');
         // outPut = test;//outPutに計算結果が格納される
-        outPut.innerHTML = `答えは` + `${test}`  + `です`;
+        outPut.innerHTML = `答えは ${test} です`;
 
-        /////////演習２
-        // if ( Number(parseInt(test))) {
-        //     outPut.innerHTML = `答えは` + test  + `ですよ`;
-        // }else if ( test !== Number) {
-        //     outPut.innerHTML = `数値を入力してください`;
-        // }
+        /////////演習問題２
+        if ( Number(parseInt(test))) {
+            outPut.innerHTML = `答えは` + test  + `です`;
+        }else if ( test !== Number) {
+            outPut.innerHTML = `数値を入力してください`;
+        }
 
-        // const array = [];
-        // if ( num1 , num2 == Number(parseInt(test))) {
-        //     outPut.innerHTML = `答えは` + test  + `ですよ`;
-        //     return num1 + num2;
-        // }else if ( test !== Number) {
-        //     outPut.innerHTML = `数値を入力してください`;
-        // }
-
-        // {
-        // const array = [1];
-        // array[0] = 2; //変更できる
-        // array.push('hi'); //追加できる
-        // }
-
+        //////////演習問題３
         function multiply() {
             const array = [1];
 
@@ -207,17 +246,11 @@ console.log(String);
                 console.log(array);
             }
             return num1 + num2;
-         
         }
         console.log( multiply(num1, num2 ) + 'ですよ' );
         //ボタンを押すと計算結果が出てくる
 
-      
-
-
-    }
-    const btn = document.getElementById('btn');
-    btn.addEventListener('click',plus);
+    });
 
 
 
