@@ -75,9 +75,13 @@ submit.onclick = function func1() {
     const results = document.getElementById('results');
 
     const ans = test;
-    const judge = ( ans === 'A') ? '正解' : '不正解'
-                ( ans === 'a')  ? '正解' : '不正解' 
+    const judge = new String( ans === 'a') ? '正解' : '不正解'
+    // ? (trueの場合) : (falseの場合) 
+    judge.toUpperCase(); // A　が　効かない
+    // 苦戦した理由　new stringは()内の文字列のみを変換することを理解していなかった。
     results.textContent = judge; //judgeの処理の結果を格納する
+
+    
     }
 
 // 結果を表示する
@@ -89,3 +93,6 @@ submit.onclick = function func1() {
 // 小文字で入力しても正解になるようにする
 // 解答の選択肢以外が入力されたら、「A、B、Cで解答してください」と表示する
 
+// var str = new String("Hallo Japan！");
+// var UPstr = str.toUpperCase();
+// console.log(UPstr);
