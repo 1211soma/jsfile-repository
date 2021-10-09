@@ -182,7 +182,7 @@ submit.onclick = function func1( start ) {
     change3.toUpperCase(); // 小文字に変換するメソッド
     results.textContent = judge_c; //judgeの処理の結果を格納する
     judge_c === '1'  ? console.log('正解！！！')  
-    : judge_c !== '1' ? judge_c === '0' && console.log('不正解！！！')
+    : judge_c === '0' ? console.log('不正解！！！')
     : judge_c === '1','0' ? console.log('３問目終了')  
     : judge[2];
     judge[2] = judge_c;
@@ -200,8 +200,8 @@ submit.onclick = function func1( start ) {
    
     const clearBtn = document.getElementById('clear');
     clearBtn.onclick = function clearBtn() {
-        results.textContent = '';
-        window.location.reload();// このメソッドでページ再読み込み
+    results.textContent = '';
+    window.location.reload();// このメソッドでページ再読み込み
 
     }
     // if (judge_c === '正解') {

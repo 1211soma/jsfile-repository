@@ -139,6 +139,12 @@ submit.onclick = function func1() {
 
 
 
+
+
+
+
+
+
     results.innerText = `三問中、${right}問正解！`;
     submit.remove();
 

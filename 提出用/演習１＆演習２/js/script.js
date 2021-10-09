@@ -42,7 +42,7 @@ submit.onclick = function func1() {
     : ans === 'b' ? '不正解'
     : ans === 'C' ? '不正解'
     : ans === 'c' ? '不正解' 
-    : ans !== 'A' ? 'A.B.Cで選んでください' :
+    : ans !== 'A' ? 'A.B.Cで回答してください' :
     change1.toUpperCase(); // 小文字に変換するメソッド
     results.textContent = judge_a;
     //judgeの処理の結果を格納する
