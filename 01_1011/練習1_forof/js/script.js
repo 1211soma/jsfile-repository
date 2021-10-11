@@ -4,7 +4,7 @@ const para = document.querySelectorAll('p');
 
 
 for ( const i of para) {
-    console.log( i.classList = '.hoge');
+    console.log( i.classList = 'hoge');
 }
 
 
@@ -18,3 +18,5 @@ for ( const i of para) {
 // all で取得
 // for ofで回す
 // 仮変数に対してclassListでclass名を入れる
+
+
