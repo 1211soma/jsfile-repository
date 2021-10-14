@@ -21,3 +21,66 @@ const scoreList = [
   { id : 8, score : 65},
   { id : 9, score : 30},
 ];
+
+const goukaku = document.getElementById('goukaku');
+const fugoukaku = document.getElementById('fugoukaku');
+
+const obj1 = memberList.map(function(num,index){
+  return {id: num.id, name: num.name, score: scoreList[index].score} //ここでオブジェクトをつくってしまう
+}); //key名: num.key名 で 値が取得できる   //scoreList[index].score で オブジェクト名[値の番号].key名 を取得
+
+//return {id: num.id,name : num.name,score : scoreList[index].score} //ここでオブジェクトをつくってしまう
+
+
+// memberListを複製して書き換えるため、memberの引数は num を指定するだけでいいが、scoreListに関しては、
+// indexを使って、番号を指定、全てを呼び出す必要がある
+
+
+// numは配列の値　indexは配列の番号　
+// num = 配列の値　num.** = オブジェクトなどで使うもの　num.key名　で指定
+console.log(obj1);
+
+
+
+const obj2 = obj1.filter(function(num){
+  return num.score >= 70; //num のみではドコのkeyのvalueを呼び出したらいいか、わからない なので、num.scoreである
+})
+console.log(obj2);  //合格者を表示させる
+
+const obj3 = obj1.filter(function(num){
+  return num.score <= 30;
+});
+console.log(obj3);    // 不合格者を表示させる
+
+const obj4 = obj2.map(function(num){
+  const li = document.createElement('li');
+  li.innerHTML = `${num.id}番 ${num.name} 合格 ${num.score}点 `;
+  goukaku.appendChild(li);
+})
+// innerHTMLを使ってオブジェクトを文字列にして、テンプレリテラルで文字列にしてブラウザ表示させる。
+
+
+const obj5 = obj3.map(function(num){
+  const li2 = document.createElement('li');
+  li2.innerHTML = `${num.id}番 ${num.name} 不合格 ${num.score}点 `;
+  fugoukaku.appendChild(li2);
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
