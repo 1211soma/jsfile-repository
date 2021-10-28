@@ -1,0 +1,88 @@
+    <!DOCTYPE html>
+    <html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>演習課題3　リターン</title>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+        <script type="text/babel">
+    
+    
+            const Counter = () => {
+                const initialState = 10;
+                const [count, setCount]= React.useState(initialState);
+                // useState（）に入っているものは配列
+                return (
+                    // reactフラグメント
+                    <>
+                <p>現在の数字は{ count }です</p>
+                <button onClick = {() => setCount(count+1)}>+1</button>
+                <button onClick = {() => setCount(count-1)}>-1</button>
+                <button onClick = {() => setCount(0)}>0</button>
+                    </>
+                )
+            }
+    
+        function Todo() {
+            const dataList = [
+                { key: 1, text: 'あ', done: true},
+                { key: 2 , text: 'い', done: false},
+                { key: 3 , text: 'う', done: false}
+            ]
+            const [items,setItems] = React.useState(dataList)
+            return (
+                <ul>
+                {items.map(items =>(
+                    <li><label className='listbook'>
+                        <input type='checkbox' /> {item.text}</label></li>
+                ))}
+                </ul>
+            );
+            
+        }
+    
+    
+        ReactDOM.render(<App />, document.getElementById('root'));
+    
+    
+            ReactDOM.render(<Counter />, document.getElementById('root'));
+    // useState で管理する
+    
+    
+        </script>
+    </body>
+    </html>
+
+
+
+
+
+<!-- 
+    function Todo() {
+        const dataList = [
+            { key: 1, text: 'あ', done: true},
+            { key: 2 , text: 'い', done: false},
+            { key: 3 , text: 'う', done: false}
+        ]
+        const [items,setItems] = React.useState(dataList)
+        return (
+            <ul>
+            {items.map(items =>(
+                <li><label className='listbook'>
+                    <input type='checkbox' /> {item.text}</label></li>
+            ))}
+            </ul>
+        );
+        
+    }
+
+
+    ReactDOM.render(<App />, document.getElementById('root')); -->
+

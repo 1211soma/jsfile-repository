@@ -39,7 +39,8 @@ const obj1 = memberList.map(function(num,index){
 // numは配列の値　indexは配列の番号　
 // num = 配列の値　num.** = オブジェクトなどで使うもの　num.key名　で指定
 console.log(obj1);
-
+// return で値を関数元に返すことによって、その値を抱えた関数を他の関数で使う際に引用できる。
+// return のメリット
 
 
 const obj2 = obj1.filter(function(num){
