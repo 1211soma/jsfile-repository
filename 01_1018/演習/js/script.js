@@ -14,9 +14,7 @@ const ArrayBox = ()=>
 
 const edi = (index) =>{
     const submit = prompt('編集内容を入力');
-    submit === '' ? // ''がtrueだったら
-    alert('文字を入力してください') :
-    arr.splice(index,1,submit)// N番目の1個だけをsbmitに置き換えてください
+    submit === '' ? alert('文字を入力してください') : arr.splice(index,1,submit)// N番目の1個だけをsbmitに置き換えてください
     TodoList.innerHTML='';
     ArrayBox()
 }
@@ -28,9 +26,9 @@ const delBtn =(index)=>{ //削除ボタンを
 }
 
 const TodoBox = () => {
-    inp.value ==='' ?
+    inp.value === '' ?
     alert('文字を入力してください'):
-    (()=>{
+    (() => {
         arr = [...arr,inp.value];      //即時関数
         TodoList.innerHTML='';
         ArrayBox()
@@ -40,7 +38,7 @@ const TodoBox = () => {
 btn.addEventListener('click',() => TodoBox());
 
 
-// 演習２やってみる　変数名変更する
+// 演習２やってみる　
 
 
 

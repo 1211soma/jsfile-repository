@@ -3,14 +3,14 @@
 const btn =  document.getElementById('btn');
 const inp = document.querySelector('input');
 const TodoList = document.getElementById('todo');
+const doing = document.getElementById('doing');
+
+
 let arr = [];
 
 
-
-
 const ArrayBox = ()=>
-    arr.forEach((value,index)=>TodoList.innerHTML += `<li>${value}<button onclick=delBtn(${index})>削除</button>
-    <button onclick=NewBtn(${index})>編集</button></li>`);
+    arr.forEach((value,index)=>TodoList.innerHTML += `<li>${value}<button onclick=delBtn(${index})>削除</button><button onclick=NewBtn(${index})>編集</button></li>`);
 
 
 const edi = (index) =>{
@@ -22,7 +22,7 @@ const edi = (index) =>{
     ArrayBox()
 }
 
-const delBtn = (index) =>{ //削除ボタンを
+const delBtn = (index) =>{ //削除ボタン
     arr.splice(index,1)// splice = 指定したものを削除
     TodoList.innerHTML='';
     ArrayBox()
@@ -40,7 +40,10 @@ const TodoBox = () => {
 }
 
 const NewBtn = () => {
-    inp.value === prompt('編集内容を入力してね');
+    const text = prompt('文字列を入力してください'); 
+    TodoList.innerHTML === String ? prompt('') : text;
+
+
 
 }
 
@@ -49,6 +52,22 @@ btn.addEventListener('click',() => TodoBox());
 
 
 // 演習２やってみる　変数名変更する
+
+
+
+// doing
+
+
+
+const doingTask = () => {
+    [...TodoList.querySelector]
+}
+
+
+
+
+
+
 
 
 
