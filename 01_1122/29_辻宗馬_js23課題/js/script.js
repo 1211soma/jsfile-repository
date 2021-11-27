@@ -10,22 +10,40 @@
 // タイマーで現在の日時を常に1秒ごとに更新させる
 
 
+
+
+
 const timer = document.getElementById("timer");
-const goal = new Date("2023/09/08 00:00:00")
+const goalTime = new Date("2023/09/08 00:00:00")
 
 function countdown(){
     const nowTime = new Date();
-    const diff = Math.floor((goal.getTime() - nowTime.getTime())/1000);
-    const second = Math.floor(diff % 60);
-    const minute = Math.floor(diff / 60 / 60) % 60;
-    const hours = Math.floor(diff / 60 / 60 ) % 24;
-    const day = Math.floor(diff / 60 / 60 / 24);
+
+    const Subtraction = Math.floor((goalTime.getTime() - nowTime.getTime())/1000);
+    const second = Math.floor(Subtraction % 60);
+
+    const minute = Math.floor(Subtraction / 60 / 60) % 60;
+    const hours = Math.floor(Subtraction / 60 / 60 ) % 24;
+    const day = Math.floor(Subtraction / 60 / 60 / 24);
+
+
     const year = Math.floor(day / 365);
     const lastday = Math.floor(day % 365);
 
     timer.innerHTML = `残り${year}年 ${lastday}日${hours}時間${minute}分${second}秒`
 
-    diff === 0 ?clearTimeout(countdown) : setTimeout(countdown,1000);
-}
+    Subtraction === 0 ?clearTimeout(countdown) : setTimeout(countdown,1000);
+};
 
 countdown();
+
+
+
+
+
+
+
+
+
+
+
